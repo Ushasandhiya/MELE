@@ -40,3 +40,136 @@
   <script src="script.js"></script>
 </body>
 </html
+
+
+
+
+.................
+
+
+
+CSS
+
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+header {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem 2rem;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Section */
+.progress-section h2,
+.feedback-section h2 {
+  text-align: center;
+  color: #333;
+}
+
+.progress-card {
+  background: #e8f5e9;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+.progress-bar {
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 25px;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  background: #4CAF50;
+  height: 100%;
+  color: white;
+  text-align: center;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+/* Feedback Section */
+textarea {
+  width: 100%;
+  height: 80px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background:#4CAF50;
+}
+
+#feedbackMessage {
+  color: green;
+  text-align: center;
+  margin-top: 10px;
+}
+.logout -button {
+  background-position: black;
+  background:white;
+  padding:10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+transition: background 0.3s;
+}
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+
+
+
+
+
+........................................
+.
+
+
+// Handle Feedback Submission
+document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  const feedbackText = document.getElementById("feedbackText").value;
+  const message = document.getElementById("feedbackMessage");
+  
+  if (feedbackText.trim() !== "") {
+    message.textContent = "✅ Thank you for your feedback!";
+    document.getElementById("feedbackForm").reset();
+  } else {
+    message.textContent = "⚠ Please enter some feedback.";
+    message.style.color = "red";
+  }
+});
