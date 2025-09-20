@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Parent Dashboard</h1>
+  <ahref="login.html"
+  class="logout-button">logout</a>
+  </header>
+
+  <main>
+    <!-- Child Progress Section -->
+    <section class="progress-section">
+      <h2>Child's Progress</h2>
+      <div class="progress-card">
+        <p><strong>Name:</strong> student name</p>
+        <p><strong>Class:</strong> any grade</p>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 75%;">75%</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section">
+      <h2>Give Feedback</h2>
+      <form id="feedbackForm">
+        <textarea id="feedbackText" placeholder="Write your feedback..." required></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+      <p id="feedbackMessage"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html
